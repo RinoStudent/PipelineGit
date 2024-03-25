@@ -3,6 +3,6 @@ on:
   workflow_dispatch:
 jobs:
   run-npm-test:
-    uses: ./.github/workflows/ex4.yml
+    uses: ./.github/workflows/ex4.yaml
     with:
       node-version: 14
