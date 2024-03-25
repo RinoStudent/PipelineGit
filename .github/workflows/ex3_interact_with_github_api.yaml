@@ -1,8 +1,6 @@
 name: interact with Github API
 on: 
   pull_request:
-
-
 jobs:
   create-issue:
     permissions:
@@ -19,4 +17,4 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
           https://api.github.com/repos/${GITHUB_REPOSITORY}/issues \
-          -d '{"title":"${{steps.sha_reducing.outputs.sha}}","body":"I'\''m having a problem with this.","assignees":["octocat"],"milestone":1,"labels":["bug"]}'
+          -d '{"title":"${{steps.sha_reducing.outputs.sha}}","body":"I'\''m having a problem with this.","labels":["bug"]}'
