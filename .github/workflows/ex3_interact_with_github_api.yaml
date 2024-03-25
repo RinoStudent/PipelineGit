@@ -2,10 +2,11 @@ name: interact with Github API
 on: 
   pull_request:
 
+
 jobs:
-  permissions:
-    issues: write
   create-issue:
+    permissions:
+      issues: write
     runs-on: ubuntu-latest
     steps:
       - name: SHA reducing
